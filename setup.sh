@@ -31,3 +31,20 @@ else
     echo "symlinked .tmux.conf"
 fi
 
+if [ -e $HOME/.zshrc ]; then
+    echo ".zshrc already exists, delete or rename first"
+else
+    ln -s dotfiles/.zshrc $HOME/.zshrc
+    echo "symlinked .tmux.conf"
+fi
+
+# clone and install powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
+
