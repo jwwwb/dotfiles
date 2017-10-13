@@ -47,4 +47,6 @@ cd fonts
 cd ..
 rm -rf fonts
 
+git config --global user.name jwwwb
+git config --global user.email james@jwwwb.com
 

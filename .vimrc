@@ -42,3 +42,9 @@ set smarttab
 set expandtab
 set number
 
+" underscore for append to file
+:nnoremap _ Go<CR>
+
+" yank to system clipboard
+set clipboard=unnamed
+
