@@ -1,0 +1,12 @@
+[/]
+foreground-color='rgb(199,199,199)'
+visible-name='Green Machine'
+custom-command='/usr/bin/zsh'
+default-size-columns=120
+default-size-rows=42
+use-system-font=false
+use-custom-command=true
+use-theme-colors=false
+font='Fira Mono for Powerline Medium 12'
+use-theme-transparency=false
+background-color='rgb(5,49,27)'
