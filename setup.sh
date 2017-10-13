@@ -35,7 +35,7 @@ if [ -e $HOME/.zshrc ]; then
     echo ".zshrc already exists, delete or rename first"
 else
     ln -s dotfiles/.zshrc $HOME/.zshrc
-    echo "symlinked .tmux.conf"
+    echo "symlinked .zshrc"
 fi
 
 # clone and install powerline fonts
