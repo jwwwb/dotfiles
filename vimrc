@@ -55,6 +55,7 @@ set number
 
 " underscore for append to file
 nnoremap _ Go<CR>
+nnoremap + o<Esc>
 
 " yank to system clipboard
 set clipboard=unnamed
@@ -78,4 +79,5 @@ end
 
 "save in insert mode using ^s
 inoremap <c-s> <c-o>:w<cr>
+inoremap <c-q> <c-o>:wq<cr>
 
