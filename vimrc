@@ -7,6 +7,17 @@ set ru
 " stop pretending to be vi:
 set nocompatible
 
+" vundle:
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+" add plugins here using "Plugin 'githubrepo/package'"
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" end add plugins
+call vundle#end()
+
 " netrw
 filetype plugin on
 
