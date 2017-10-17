@@ -1,5 +1,6 @@
 " Syntax Highlighting
 syntax on
+colo slate
 
 " Ruler
 set ru
