@@ -63,3 +63,16 @@ set clipboard=unnamed
 nmap <F6> :w<CR>:silent !chmod 755 %<CR>:silent !./% > .tmp.xyz<CR>
      \ :tabnew<CR>:r .tmp.xyz<CR>:silent !rm .tmp.xyz<CR>:redraw!<CR>
 
+" make airline look like powerline
+set t_Co=256
+let g:airline_theme='luna'
+let g:airline_powerline_fonts = 1
+
+" make mouse work inside of vim
+set mouse=a
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
+
