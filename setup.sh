@@ -47,6 +47,12 @@ cd fonts
 cd ..
 rm -rf fonts
 
+# install vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+
+# setup git details
 git config --global user.name jwwwb
 git config --global user.email james@jwwwb.com
+
 
