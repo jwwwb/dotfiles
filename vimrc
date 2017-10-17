@@ -42,3 +42,13 @@ set smarttab
 set expandtab
 set number
 
+" underscore for append to file
+:nnoremap _ Go<CR>
+
+" yank to system clipboard
+set clipboard=unnamed
+
+" f5 to execute file (make sure it has hashbang at the start!)
+nmap <F6> :w<CR>:silent !chmod 755 %<CR>:silent !./% > .tmp.xyz<CR>
+     \ :tabnew<CR>:r .tmp.xyz<CR>:silent !rm .tmp.xyz<CR>:redraw!<CR>
+
