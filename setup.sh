@@ -32,7 +32,8 @@ else
 fi
 
 if [ -e $HOME/.zshrc ]; then
-    echo ".zshrc already exists, delete or rename first"
+    cat dotfiles/zshrc >> $HOME/.zshrc
+    echo ".zshrc already exists, appending basic infos."
 else
     ln -s dotfiles/zshrc $HOME/.zshrc
     echo "symlinked .zshrc"

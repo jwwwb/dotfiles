@@ -7,7 +7,7 @@ set ru
 " stop pretending to be vi:
 set nocompatible
 
-" vundle:
+" Vundle:
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -54,7 +54,7 @@ set expandtab
 set number
 
 " underscore for append to file
-:nnoremap _ Go<CR>
+nnoremap _ Go<CR>
 
 " yank to system clipboard
 set clipboard=unnamed
@@ -75,4 +75,7 @@ if has("mouse_sgr")
 else
     set ttymouse=xterm2
 end
+
+"save in insert mode using ^s
+inoremap <c-s> <c-o>:w<cr>
 
