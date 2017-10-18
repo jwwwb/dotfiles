@@ -52,6 +52,7 @@ set smartindent
 set smarttab
 set expandtab
 set number
+set colorcolumn=81
 
 " underscore for append to file
 nnoremap _ Go<CR>
