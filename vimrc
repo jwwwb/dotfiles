@@ -56,7 +56,7 @@ set smarttab
 set expandtab
 set number
 set nowrap
-set colorcolumn=81
+set colorcolumn=81,121
 highlight ColorColumn ctermbg=8
 
 " underscore for append to file
