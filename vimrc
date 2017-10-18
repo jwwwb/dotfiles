@@ -56,8 +56,8 @@ set number
 set colorcolumn=81
 
 " underscore for append to file
-nnoremap _ Go<CR>
-nnoremap + o<Esc>
+nnoremap + Go<CR>
+nnoremap _ o<Esc>
 
 " yank to system clipboard
 set clipboard=unnamed

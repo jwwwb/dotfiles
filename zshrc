@@ -11,3 +11,9 @@ if type tmux >/dev/null 2>/dev/null; then
         tmux -2 new-session -A -s main
     fi
 fi
+
+# short prompt
+prompt_dir() {
+    prompt_segment blue black '%c'
+}
+
