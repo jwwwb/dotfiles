@@ -1,6 +1,7 @@
 " Syntax Highlighting
 syntax on
 colo slate
+set t_Co=256
 
 " Ruler
 set ru
@@ -16,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 " add plugins here using "Plugin 'githubrepo/package'"
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'bronson/vim-trailing-whitespace'
 " end add plugins
 call vundle#end()
 
@@ -53,7 +55,9 @@ set smartindent
 set smarttab
 set expandtab
 set number
+set nowrap
 set colorcolumn=81
+highlight ColorColumn ctermbg=8
 
 " underscore for append to file
 nnoremap + Go<CR>
@@ -79,7 +83,14 @@ else
     set ttymouse=xterm2
 end
 
-"save in insert mode using ^s
+" save in insert mode using ^s
 inoremap <c-s> <c-o>:w<cr>
 inoremap <c-q> <c-o>:wq<cr>
+
+" visualize special keys:
+highlight SpecialKey ctermfg=236
+highlight NonText ctermfg=236
+set list
+set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set showbreak=↪
 
