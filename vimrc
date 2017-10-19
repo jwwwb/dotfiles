@@ -56,7 +56,7 @@ set smarttab
 set expandtab
 set number
 set nowrap
-set colorcolumn=81
+set colorcolumn=81,121
 highlight ColorColumn ctermbg=8
 
 " underscore for append to file
@@ -64,7 +64,7 @@ nnoremap + Go<CR>
 nnoremap _ o<Esc>
 
 " yank to system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " f5 to execute file (make sure it has hashbang at the start!)
 nmap <F6> :w<CR>:silent !chmod 755 %<CR>:silent !./% > .tmp.xyz<CR>
@@ -86,10 +86,11 @@ end
 " save in insert mode using ^s
 inoremap <c-s> <c-o>:w<cr>
 inoremap <c-q> <c-o>:wq<cr>
+nnoremap <c-s> :w<cr>
 
 " visualize special keys:
-highlight SpecialKey ctermfg=236
-highlight NonText ctermfg=236
+highlight SpecialKey ctermfg=36
+highlight NonText ctermfg=36
 set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
