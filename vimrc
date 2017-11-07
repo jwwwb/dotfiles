@@ -89,11 +89,11 @@ inoremap <c-q> <c-o>:wq<cr>
 nnoremap <c-s> :w<cr>
 
 " disable arrow keys and backspace in insert mode
-inoremap <Up> <Esc>
-inoremap <Down> <Esc>
+inoremap <Up> <Esc>k
+inoremap <Down> <Esc>j
 inoremap <Left> <Esc>
-inoremap <Right> <Esc>
-inoremap <Backspace> <Esc>
+inoremap <Right> <Esc>2l
+" inoremap <Backspace> <Esc>
 
 " visualize special keys:
 highlight SpecialKey ctermfg=36
