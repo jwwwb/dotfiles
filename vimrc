@@ -84,7 +84,7 @@ else
 end
 
 " save in insert mode using ^s
-inoremap <c-s> <c-o>:w<cr>
+inoremap <c-s> <c-o>:w<cr><Esc>
 inoremap <c-q> <c-o>:wq<cr>
 nnoremap <c-s> :w<cr>
 
