@@ -43,8 +43,10 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " nerdcommenter settings for commenting and uncommenting
+let g:NERDCreateDefaultMappings = 0
 let g:NERDSpaceDelims = 1   "add spaces after comment delimiter
 let g:NERDTrimTrailingWhitespace = 1 "trim trailing whitespace when uncomm-ing
+let g:NERDDefaultAlign = 'left'
 
 " set relative line numbers
 set relativenumber
@@ -112,6 +114,10 @@ set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
 " commenting remaps:
-nnoremap <leader>a j
-nnoremap <c-/> NERDComToggleComment
+nnoremap ,c :call NERDComment(0,"toggle")<CR>
+nnoremap <c-[> :call NERDComment(0,"toggle")<CR>
+nnoremap <c-_> :call NERDComment(0,"toggle")<CR>
+vnoremap ,c :call NERDComment(0,"toggle")<CR>
+vnoremap <c-[> :call NERDComment(0,"toggle")<CR>
+vnoremap <c-_> :call NERDComment(0,"toggle")<CR>
 
