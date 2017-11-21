@@ -115,9 +115,7 @@ set showbreak=↪
 
 " commenting remaps:
 nnoremap ,c :call NERDComment(0,"toggle")<CR>
-nnoremap <c-[> :call NERDComment(0,"toggle")<CR>
 nnoremap <c-_> :call NERDComment(0,"toggle")<CR>
 vnoremap ,c :call NERDComment(0,"toggle")<CR>
-vnoremap <c-[> :call NERDComment(0,"toggle")<CR>
 vnoremap <c-_> :call NERDComment(0,"toggle")<CR>
 
