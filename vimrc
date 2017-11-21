@@ -18,10 +18,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'scrooloose/nerdcommenter'
 " end add plugins
 call vundle#end()
 
-" netrw
+" netrw and nerdcommenter require this
 filetype plugin on
 
 " allow search to go into subfolders
@@ -41,6 +42,10 @@ let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
+" nerdcommenter settings for commenting and uncommenting
+let g:NERDSpaceDelims = 1   "add spaces after comment delimiter
+let g:NERDTrimTrailingWhitespace = 1 "trim trailing whitespace when uncomm-ing
+
 " set relative line numbers
 set relativenumber
 set number
@@ -59,9 +64,13 @@ set nowrap
 set colorcolumn=81,121
 highlight ColorColumn ctermbg=8
 
+" leader key as comma
+let mapleader=","
+
 " underscore for append to file
-nnoremap + Go<CR>
+nnoremap + Go
 nnoremap _ o<Esc>
+nnoremap ; :
 
 " yank to system clipboard
 set clipboard=unnamedplus
@@ -101,4 +110,8 @@ highlight NonText ctermfg=36
 set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
+
+" commenting remaps:
+nnoremap <leader>a j
+nnoremap <c-/> NERDComToggleComment
 
