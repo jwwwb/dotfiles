@@ -5,6 +5,7 @@ set t_Co=256
 
 " Ruler
 set ru
+set cursorcolumn
 
 " stop pretending to be vi:
 set nocompatible
@@ -66,13 +67,12 @@ set nowrap
 set colorcolumn=81,121
 highlight ColorColumn ctermbg=8
 
-" leader key as comma
-let mapleader=","
-
-" underscore for append to file
-nnoremap + Go
-nnoremap _ o<Esc>
-nnoremap ; :
+let mapleader=","           " leader key as comma
+nnoremap + Go|              " plus appends to file
+nnoremap _ o<Esc>|          " nderscore adds blank line below
+nnoremap ; :|               " make colon work just like semicolon
+nnoremap <C-i> i_<Esc>r|    " ^i behaves like r but for insert
+nnoremap <Leader>e :tabdo exec 'windo e'<CR>
 
 " yank to system clipboard
 set clipboard=unnamedplus
@@ -118,4 +118,8 @@ nnoremap ,c :call NERDComment(0,"toggle")<CR>
 nnoremap <c-_> :call NERDComment(0,"toggle")<CR>
 vnoremap ,c :call NERDComment(0,"toggle")<CR>
 vnoremap <c-_> :call NERDComment(0,"toggle")<CR>
+
+" make split opening more natural:
+set splitbelow
+set splitright
 
