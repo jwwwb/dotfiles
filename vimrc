@@ -20,8 +20,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'lervag/vimtex'
+" :PluginInstall to install
 " end add plugins
 call vundle#end()
+
+" set vimtex pdf viewer
+let g:latex_view_general_viewer = 'open'
 
 " netrw and nerdcommenter require this
 filetype plugin on
