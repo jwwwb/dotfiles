@@ -27,6 +27,7 @@ call vundle#end()
 
 " set vimtex pdf viewer
 let g:latex_view_general_viewer = 'open'
+let g:vimtex_compiler_latexmk = {'callback' : 0}
 
 " netrw and nerdcommenter require this
 filetype plugin on
