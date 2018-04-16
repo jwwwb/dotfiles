@@ -1,5 +1,14 @@
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH=$HOME/.oh-my-zsh
+plugins=(
+  git
+)
+
+
 # use agnoster color theme
 ZSH_THEME="agnoster"
+
+source $ZSH/oh-my-zsh.sh
 
 # disable shell blocking, passing through ctrl+s to vim
 stty -ixon

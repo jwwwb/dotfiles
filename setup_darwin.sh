@@ -16,11 +16,11 @@ fi
 if ! command -v git >/dev/null; then
     brew install git
 fi
-if ! command -v zsh >/dev/null; then
-    brew install zsh
-fi
 if ! command -v tmux >/dev/null; then
     brew install tmux
+fi
+if ! command -v zsh >/dev/null; then
+    brew install zsh
 fi
 
 echo "installed everything!"
