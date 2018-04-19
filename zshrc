@@ -26,3 +26,10 @@ prompt_dir() {
     prompt_segment blue black '%c'
 }
 
+# aliases for short commands
+alias p='python3'
+alias i='ipython'
+alias pi='python3 -i'
+alias j='jupyter notebook'
+alias e='vim'
+
