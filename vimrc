@@ -6,6 +6,7 @@ set t_Co=256
 " Ruler
 set ru
 set cursorcolumn
+set cursorline
 
 " stop pretending to be vi:
 set nocompatible
