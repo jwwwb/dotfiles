@@ -2,6 +2,7 @@
 syntax on
 colo slate
 set t_Co=256
+let g:python_highlight_all = 1  " from hidma/python-syntax
 
 " Ruler
 set ru
@@ -25,6 +26,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'lervag/vimtex'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'mileszs/ack.vim'
+Plugin 'vim-python/python-syntax'
+Plugin 'reasonml-editor/vim-reason-plus'
 " :PluginInstall to install
 " end add plugins
 call vundle#end()
@@ -74,14 +77,15 @@ set smarttab
 set expandtab
 set number
 set nowrap
-set colorcolumn=73,80
+set colorcolumn=80
 highlight ColorColumn ctermbg=8
 
 let mapleader=","           " leader key as comma
 nnoremap + Go|              " plus appends to file
 nnoremap _ o<Esc>|          " nderscore adds blank line below
 nnoremap ; :|               " make colon work just like semicolon
-nnoremap <C-i> i_<Esc>r|    " ^i behaves like r but for insert
+" nnoremap <C-i> i_<Esc>r|    " ^i behaves like r but for insert
+nnoremap <C-p> $p|          " ^p to paste at end of line
 
 " ,e to reload all (nerdtree compatible)
 function ReloadAllBuffers ()
@@ -96,7 +100,14 @@ endfunction
 nnoremap <Leader>e :call ReloadAllBuffers()<CR>
 
 " yank to system clipboard
-set clipboard=unnamedplus
+" set clipboard=unnamed
+" yank to clipboard
+ if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
 
 " f5 to execute file (make sure it has hashbang at the start!)
 nmap <F6> :w<CR>:silent !chmod 755 %<CR>:silent !./% > .tmp.xyz<CR>
@@ -104,7 +115,7 @@ nmap <F6> :w<CR>:silent !chmod 755 %<CR>:silent !./% > .tmp.xyz<CR>
 
 " make airline look like powerline
 set t_Co=256
-let g:airline_theme='luna'
+let g:airline_theme='wombat'
 let g:airline_powerline_fonts = 1
 
 " make mouse work inside of vim
@@ -181,4 +192,14 @@ endif
 
 " scala highlighting for .sc mill file
 autocmd BufNewFile,BufRead *.sc set syntax=scala
+autocmd BufNewFile,BufRead *.cls set syntax=java
 
+" spell check
+" set spell spelllang=en_us
+
+" make nerdtree split keys reasonable
+let NERDTreeMapOpenVSplit='i'
+let NERDTreeMapOpenSplit='s'
+
+" open containing folder with ,e
+nnoremap <Leader>o :!open "%:h"<CR><CR>
