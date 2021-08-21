@@ -26,6 +26,12 @@ prompt_dir() {
     prompt_segment blue black '%c'
 }
 
+# extra git commands
+alias gqa='git checkout qa && git pull && git merge --no-edit @{-1} && git push && git checkout -'
+alias gsp='git stash pop'
+alias gsk='git stash -k -u'
+alias gmm='git merge --no-edit'
+
 # aliases for short commands
 alias p='python3'
 alias i='ipython'
