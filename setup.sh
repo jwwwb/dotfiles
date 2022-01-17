@@ -40,6 +40,9 @@ else
     echo "symlinked .zshrc"
 fi
 
+ln -s $(pwd)/gitignore_global $HOME/.gitignore_global
+echo "symlinked .gitignore_global"
+
 # clone and install powerline fonts
 git clone https://github.com/powerline/fonts.git --depth=1
 # install
@@ -56,5 +59,5 @@ vim +PluginInstall +qall
 # setup git details
 git config --global user.name jwwwb
 git config --global user.email james@jwwwb.com
-
+git config --global core.excludesFile '~/.gitignore_global'
 
